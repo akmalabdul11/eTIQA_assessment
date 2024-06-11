@@ -1,7 +1,6 @@
 ﻿using EFreelancer.Data;
 using EFreelancer.Entities;
 using EFreelancer.Models.Global;
-using EFreelancer.Models.Traders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -23,41 +22,41 @@ namespace EFreelancer.Services
             _db = db;
         }
 
-        public async Task<UserEntityCreationResult> CreateTraderUser(CreateTraderUserData data)
-        {
-            var existingLogin = await _userManager.FindByNameAsync(data.Email);
+        // public async Task<UserEntityCreationResult> CreateTraderUser(CreateTraderUserData data)
+        // {
+        //     var existingLogin = await _userManager.FindByNameAsync(data.Email);
 
-            if (existingLogin != null)
-            {
-                return new UserEntityCreationResult()
-                {
-                    Error = "Email has already been used for another account"
-                };
-            }
+        //     if (existingLogin != null)
+        //     {
+        //         return new UserEntityCreationResult()
+        //         {
+        //             Error = "Email has already been used for another account"
+        //         };
+        //     }
 
-            var newUser = new UserLogins
-            {
-                UserName = data.Email,
-                Email = data.Email,
-                PhoneNumber = data.PhoneNumber,
-            };
+        //     var newUser = new UserLogins
+        //     {
+        //         UserName = data.Email,
+        //         Email = data.Email,
+        //         PhoneNumber = data.PhoneNumber,
+        //     };
 
-            var createdUser = await _userManager.CreateAsync(newUser, data.Password);
+        //     var createdUser = await _userManager.CreateAsync(newUser, data.Password);
 
-            if (!createdUser.Succeeded)
-            {
-                return new UserEntityCreationResult()
-                {
-                    Error = createdUser.Errors.Select(x => x.Description).FirstOrDefault()
-                };
-            }
+        //     if (!createdUser.Succeeded)
+        //     {
+        //         return new UserEntityCreationResult()
+        //         {
+        //             Error = createdUser.Errors.Select(x => x.Description).FirstOrDefault()
+        //         };
+        //     }
 
-            return new UserEntityCreationResult()
-            {
-                Success = true,
-                EntityId = newUser.Id
-            };
-        }
+        //     return new UserEntityCreationResult()
+        //     {
+        //         Success = true,
+        //         EntityId = newUser.Id
+        //     };
+        // }
     }
 }
 

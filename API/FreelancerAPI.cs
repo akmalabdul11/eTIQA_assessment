@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using EFreelancer.Data;
 using EFreelancer.Entities;
 using EFreelancer.Global;
-using EFreelancer.Models.Traders;
+
 using EFreelancer.Models.Users;
 using EFreelancer.Services;
 using EFreelancer.Models.Global;

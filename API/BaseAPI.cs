@@ -12,7 +12,7 @@ using EFreelancer.Services;
 using EFreelancer.Global;
 using EFreelancer.Global.Enums.Common;
 using EFreelancer.Models.Admin;
-using EFreelancer.Models.Traders;
+
 using Newtonsoft.Json;
 
 namespace EFreelancer.API
