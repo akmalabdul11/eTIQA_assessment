@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Admin View";
+}
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelancer List</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- knockout -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.4/knockout.validation.min.js"
+    integrity="sha512-b99MDNv5TqiZtPKH2UeHzDAVydmgrOJEPtaPPEF8AgV86eYyqINFI/K7/7f0+R4WNTAVv8KvvpjwfOYHv5rd5g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<body>
+    <div class="container mt-5">
+        <h2>Freelancer List</h2>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Filter by Username"
+                data-bind="value: filterFreelancerUserName, valueUpdate: 'input'">
+            <button class="btn btn-primary mt-2" data-bind="click: getFreelancerList">Search</button>
+        </div>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Skillsets</th>
+                    <th>Hobby</th>
+                    <th>Date Joined</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: freelancers">
+                <tr>
+                    <td data-bind="text: Username"></td>
+                    <td data-bind="text: Email"></td>
+                    <td data-bind="text: PhoneNumber"></td>
+                    <td data-bind="text: Skillsets"></td>
+                    <td data-bind="text: Hobby"></td>
+                    <td data-bind="text: DateJoined"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button class="btn btn-secondary" data-bind="click: prevPage, enable: pageIndex() > 1">Previous</button>
+            <span data-bind="text: pageIndex"></span>
+            <button class="btn btn-secondary" data-bind="click: nextPage, enable: hasMorePages">Next</button>
+        </div>
+    </div>
+
+    <script src="/js/adminView.js"></script>
+</body>

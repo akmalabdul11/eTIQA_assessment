@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelancer Signup</title>
+<!-- knockout -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.4/knockout.validation.min.js"
+    integrity="sha512-b99MDNv5TqiZtPKH2UeHzDAVydmgrOJEPtaPPEF8AgV86eYyqINFI/K7/7f0+R4WNTAVv8KvvpjwfOYHv5rd5g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<body>
+    <div id="signup-form">
+        <h2>Freelancer Signup</h2>
+        <form data-bind="submit: submitSignup">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" data-bind="value: username, valueUpdate: 'input'" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" data-bind="value: email, valueUpdate: 'input'" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" data-bind="value: password, valueUpdate: 'input'" required>
+            </div>
+            <div>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" data-bind="value: phoneNumber, valueUpdate: 'input'" required>
+            </div>
+            <div>
+                <label for="skillsets">Skillsets:</label>
+                <input type="text" id="skillsets" data-bind="value: skillsets, valueUpdate: 'input'">
+            </div>
+            <div>
+                <label for="hobby">Hobby:</label>
+                <input type="text" id="hobby" data-bind="value: hobby, valueUpdate: 'input'">
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script src="~/js/signup.js"></script>
+</body>
