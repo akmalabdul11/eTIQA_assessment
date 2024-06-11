@@ -18,7 +18,7 @@ TODO:
 4. Run the appilcation as usual. 
 5. Visit http://localhost:5042/ for freelancer signup.
 6. After SignUp you can check the username by the MSSQL or http://localhost:5042/Admin/AdminView
-    -Note: that the ui for adnminview is not complete yet but the backend is completed. If you click F12. You can see the list of the freelancer. After clicking 'search'
+    -Note: that the ui for adminview is not complete yet because its an option but the backend is completed. If you click F12. You can see the list of the freelancer. After clicking 'search'
     you can see the user that you wanted to search will be appear on console. 
 
 7. Please refer to Image_evident file. It is list of screenshot from postman that the C# backend has been tested and working well. 
