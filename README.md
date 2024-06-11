@@ -1,20 +1,25 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This Web App is using .Net frame work. MVC. Main used to create user and view the user details. The user only register their self (@POST) Only admin has access 
+to view list of user (@GET), update user(@PUT), delete user(@DELETE).
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+1. Install VS code
+2. Install MSSQL Express
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+TODO: 
+1. Clone the project.
+2. Instal MSSQL.
+3. Connect the database. Follow step below.
+    - server name put '.'. this is because we are sing local machine.
+    - database name put 'db3000'.
+    - select 'intergrated'
+    - then click 'enable tursted server'
+4. Run the appilcation as usual. 
+5. Visit http://localhost:5042/ for freelancer signup.
+6. After SignUp you can check the username by the MSSQL or http://localhost:5042/Admin/AdminView
+    -Note: that the ui for adnminview is not complete yet but the backend is completed. If you click F12. You can see the list of the freelancer. After clicking 'search'
+    you can see the user that you wanted to search will be appear on console. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+7. Please refer to Image_evident file. It is list of screenshot from postman that the C# backend has been tested and working well. 
+    
