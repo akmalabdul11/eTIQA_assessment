@@ -12,8 +12,8 @@ $(document).ready(function () {
     function AdminViewModel() {
         var self = this;
 
-        self.freelancers = ko.observableArray([]);
-        self.filterFreelancerUserName = ko.observable('');
+        self.freelancers = ko.observableArray();
+        self.filterFreelancerUserName = ko.observable();
         self.pageIndex = ko.observable(1);
         self.pageSize = ko.observable(10);
         self.sortField = ko.observable('dateJoined');
@@ -29,14 +29,11 @@ $(document).ready(function () {
 
             console.log("Request URL:", url);  
 
-            $.getJSON(url, function (data) {
-                console.log("API Response:", data); 
-
-                self.freelancers.removeAll();
-                $.each(data.data.FreelancerList, function (index, item) {
-                    self.freelancers.push(new Freelancer(item));
-                });
-                self.itemsCount(data.data.ItemsCount);
+            $.getJSON(url, function (response) {
+                console.log("API Response:", response); 
+debugger;
+                self.freelancers(response.data.freelancerList)
+                self.itemsCount(response.data.ItemsCount);
             }).fail(function (jqXHR) {
                 alert('Failed to fetch Freelancer list. Please try again later.');
                 console.error('Failed to fetch Freelancer list:', jqXHR);
