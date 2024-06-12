@@ -12,7 +12,7 @@ I have sperate the API base on the function. Example AdminAPI for admin and Free
 # Build and Test
 TODO: 
 1. Clone the project.
-2. Instal MSSQL.
+2. Instal MSSQL inside VS code.
 3. Connect the database. Follow step below.
     - server name put '.'. this is because we are sing local machine.
     - database name put 'db3000'.
