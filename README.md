@@ -26,3 +26,6 @@ TODO:
 
 7. Please refer to Image_evident file. It is list of screenshot from postman that the C# backend has been tested and working well. 
     
+# View
+I also have hosted the project on azure portal and using azure devops as the stagging process. 
+You can visit this link https://etiqaassessment.azurewebsites.net
