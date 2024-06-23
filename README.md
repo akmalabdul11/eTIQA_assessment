@@ -19,7 +19,7 @@ TODO:
     - select 'intergrated'
     - then click 'enable tursted server'
 4. Run the appilcation as usual. 
-5. Visit http://localhost:"YOURPORTT"/ for freelancer signup.
+5. Visit http://localhost:"YOURPORT"/ for freelancer signup.
 6. After SignUp you can check the username by the MSSQL or http://localhost:YOUPORT/Admin/AdminView
     -Note: that the ui for adminview is not complete yet because its an option but the backend is completed. If you click F12. You can see the list of the freelancer. After clicking 'search'
     you can see the user that you wanted to search will be appear on console. 
